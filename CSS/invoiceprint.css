@@ -1,0 +1,18 @@
+.btn
+{
+display:none;
+}
+.NoPrint
+{
+    display:none;
+}
+.form-control{
+    border:0px;
+}
+.input-group-text{
+    border: 0px;
+    background-color: #aff3d7;
+}
+table{
+    border: 1px solid black;
+}
