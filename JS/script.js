@@ -1,3 +1,65 @@
+
+/*=============== SHOW MENU ===============*/
+let menu= document.querySelector('#bars-icon');
+let navbar= document.querySelector('.navbar');
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a')
+
+menu.onclick= () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
+window.onscroll = ()=>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+  }
+/*=============== email Js ===============*/
+// send email from Form
+const btn = document.getElementById('btn-email');
+
+document.getElementById('form')
+.addEventListener('submit', function(event) {
+    event.preventDefault();
+ 
+    btn.value = 'Sending...';
+ 
+    const serviceID = 'default_service';
+    const templateID = 'template_iz8zmzq';
+ 
+    emailjs.sendForm(serviceID, templateID, this)
+     .then(() => {
+       btn.value = 'Send Email';
+       alert('Sent!');
+     }, (err) => {
+       btn.value = 'Send Email';
+       alert(JSON.stringify(err));
+     });
+ });
+
+
+/*=============== slider ===============*/ 
+/* <----------ERASE*********************
+
+let swiperProjects = new Swiper(".projects-container", {
+ loop:true,
+ spaceBetween:30,
+
+ autoplay: {                         //autoplay
+  delay: 2000,  
+},   
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+/*=============== INVOICE  ===============*/ 
+/*  <----------ERASE*******************
 function GetPrint(){
     window.print();
 }
@@ -20,6 +82,7 @@ function Calc(v){
     var index = $(v).parent().parent().index();
     var qty = document.getElementsByName("qty")[index].value;
    /* var rate = document.getElementsByName("rate")[index].value; */
+   /*  <----------ERASE*****************
    var rate = document.getElementsByName("product")[index].value;
     var amt = qty * rate;
     document.getElementsByName("amt")[index].value = amt;
@@ -30,7 +93,7 @@ function Calc(v){
 function GetTotal()
 {
     /*Footer Calculation*/   
-
+/*  <----------ERASE************************
     var sum=0;
     var amts =  document.getElementsByName("amt");
 
@@ -52,7 +115,7 @@ function GetTotal()
 
 
 
-/*
+/* <----------ERASE******************
 var total = document.getElementById("amt");
 var netPrice = document.getElementsByClassName("Ftotal");
 
